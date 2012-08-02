@@ -12,14 +12,14 @@ Make sure you have check-rpath disabled in your ~/.rpmmacros
 
 RPM dev setup from http://fedoraproject.org/wiki/A_Short_RPM_Tutorial
 
-One off tool setup
+**One off tool setup**
 ```shell
 $ sudo yum install @development-tools
 $ sudo yum install fedora-packager
 $ sudo usermod -a -G mock <your username>
 ```
 
-*Building RPM as non-root outside ~/rpmbuild
+## Building RPM as non-root outside ~/rpmbuild
 Make sure ~/.rpmmacros has %_topdir set to your "starting directory"
 ```shell
 %_topdir                %{expand:%%(pwd)}
@@ -27,8 +27,8 @@ Make sure ~/.rpmmacros has %_topdir set to your "starting directory"
 Then clone & build:
 
 ```shell
-$ git clone https://github.com/simonmcc/rpmbuild-rubyenterprise.git
-$ cd rpmbuild-rubyenterprise
+$ git clone https://github.com/simonmcc/rpmbuild-ruby-enterprise.git
+$ cd rpmbuild-ruby-enterprise
 $ ./build.sh   
 ```
 

@@ -11,3 +11,5 @@ then
 fi
 
 rpmbuild -ba SPECS/ruby-enterprise.spec
+
+ls -la SRPMS/ruby-enterprise* RPMS/*/ruby-enterprise*
