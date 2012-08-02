@@ -1,5 +1,5 @@
 # rpmbuild-ruby-enterprise
-**Simple rpmdev setup for building redis RPMs**
+**Simple rpmdev setup for building ruby-enterprise RPMs**
 
 Original spec file from Adam Vollrath \<adam@endpoint.com\>
 * https://packages.endpoint.com/
