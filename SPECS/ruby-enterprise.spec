@@ -31,7 +31,8 @@ Name: ruby-enterprise
 Vendor: Phusion.nl <info@phusion.nl>
 Packager: Simon McCartney (simon@mccartney.ie)
 Version: 1.8.7
-Release: 9%{dist}
+#Release: el5
+Release: recs
 License: Ruby or GPL v2
 Group: Development/Languages 
 URL: http://www.rubyenterpriseedition.com/
@@ -41,7 +42,10 @@ BuildRequires: make patch gcc-c++ glibc-devel
 BuildRequires: openssl-devel readline-devel
 BuildRequires: zlib-devel
 
-#%define dist -recs
+#
+# we need to set _prefix as well for this to have any affect
+# do we need to do %_sysconfdir, %_var, ect...
+%define _prefix /opt/ruby-enterprise
 Prefix: /opt/ruby-enterprise
 
 %description 
@@ -115,7 +119,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %{_bindir}/*
 %{_prefix}/lib/*
-%{_prefix}/share/man/man1/ruby.1.gz
+%{_prefix}/share/man/man1/ruby.1
 %doc source/ChangeLog
 %doc source/COPYING
 %doc source/LEGAL
